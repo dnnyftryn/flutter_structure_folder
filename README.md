@@ -1,66 +1,45 @@
-# EXAMPLE STRUCTURE PROJECT
 
-This is dummy for structure folder flutter
+### Explanation of Folders
 
-## Getting Started
+#### `android/` and `ios/`
+- These directories contain native platform-specific code for Android and iOS, respectively.
 
-This project is a starting point for a Flutter application.
+#### `lib/`
+- **`main.dart`**: The main entry point of the application.
+- **`core/`**: Contains core functionalities that are shared across the app:
+  - `constants/`: App-wide constants like colors, strings, and dimensions.
+  - `utils/`: Utility functions and helpers.
+  - `services/`: App-wide services, such as APIs and local storage handling.
+  - `models/`: Data models for the app.
 
-flutter_project/
-├── android/                # Native Android code and settings
-├── ios/                    # Native iOS code and settings
-├── lib/                    # Main directory for Dart and Flutter code
-│   ├── main.dart           # Entry point of the app
-│   ├── core/               # Core functionalities used across the app
-│   │   ├── constants/      # App-wide constants like colors, strings, dimensions
-│   │   │   ├── colors.dart
-│   │   │   ├── strings.dart
-│   │   │   ├── dimensions.dart
-│   │   ├── utils/          # Utility classes and helpers
-│   │   │   ├── validators.dart
-│   │   │   ├── extensions.dart
-│   │   ├── services/       # App-wide services (e.g., API calls, local storage)
-│   │   │   ├── api_service.dart
-│   │   │   ├── local_storage_service.dart
-│   │   ├── models/         # Data models
-│   │       ├── user_model.dart
-│   │       ├── product_model.dart
-│   ├── features/           # Organized by app features or modules
-│   │   ├── auth/           # Authentication-related features
-│   │   │   ├── screens/    # UI for authentication
-│   │   │   │   ├── login_screen.dart
-│   │   │   │   ├── signup_screen.dart
-│   │   │   ├── widgets/    # Reusable components for auth
-│   │   │   │   ├── auth_button.dart
-│   │   │   ├── providers/  # State management (e.g., Riverpod, Provider)
-│   │       │   ├── auth_provider.dart
-│   │   ├── home/           # Home screen features
-│   │       ├── screens/
-│   │       │   ├── home_screen.dart
-│   │       │   ├── details_screen.dart
-│   │       ├── widgets/
-│   │       │   ├── product_card.dart
-│   │       ├── providers/
-│   │           ├── home_provider.dart
-│   ├── common/             # Common shared widgets or components
-│   │   ├── app_bar.dart
-│   │   ├── button.dart
-│   │   ├── input_field.dart
-│   ├── config/             # Configuration settings
-│   │   ├── env.dart        # Environment configurations
-│   │   ├── routes.dart     # App navigation routes
-│   │   ├── themes.dart     # Theme configuration
-├── test/                   # Unit and widget tests
-│   ├── main_test.dart
-│   ├── features/           # Tests organized by features
-│       ├── auth_test.dart
-│       ├── home_test.dart
-├── assets/                 # Static assets like images, fonts
-│   ├── images/
-│   │   ├── logo.png
-│   │   ├── background.jpg
-│   ├── fonts/
-│       ├── Roboto-Regular.ttf
-│       ├── Roboto-Bold.ttf
-├── pubspec.yaml            # Flutter configuration file
-├── README.md               # Project documentation
+- **`features/`**: Organized by app features or modules:
+  - Each feature contains:
+    - `screens/`: The UI screens for that feature.
+    - `widgets/`: Reusable components specific to the feature.
+    - `providers/`: State management classes for that feature.
+
+- **`common/`**: Reusable widgets or components shared across features.
+
+- **`config/`**: Application configuration settings:
+  - `env.dart`: Environment-specific configurations.
+  - `routes.dart`: App navigation and route management.
+  - `themes.dart`: Theme configurations.
+
+#### `test/`
+- Contains unit and widget tests, organized in a structure mirroring the `lib/` directory.
+
+#### `assets/`
+- Static assets like images and fonts.
+
+#### `pubspec.yaml`
+- The configuration file for managing dependencies, assets, and settings.
+
+## Usage
+
+1. Clone the repository.
+2. Install dependencies using `flutter pub get`.
+3. Run the app using `flutter run`.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
